@@ -196,3 +196,35 @@
 .trending-container {
     grid-area: trending;
 }
+
+.trending-header {
+
+}
+
+.trending-users {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-card {
+    display: grid;
+    grid-template: 1fr 1fr / 15px auto;
+    grid-template-areas:
+        "user-image user"
+        "user-image title";
+}
+
+.user-card > img {
+    grid-area: user-image;
+    height: 15px;
+    width: 15px;
+    align-self: center;
+}
+
+.user-card > .user {
+    margin-bottom: 0;
+}
+
+.user-card > .title {
+    margin-top: 0;
+}
