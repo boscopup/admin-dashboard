@@ -131,4 +131,52 @@
     border: 1px solid black;
     background-color: blueviolet;
     grid-area: content;
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template-areas:
+        "projects announcements"
+        "projects trending";
+}
+
+.projects-container {
+    grid-area: projects;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.card {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    height: 25px;
+    justify-self: flex-start;
+    padding-top: 25px;
+}
+
+.card-content {
+    height: 150px;
+    justify-self: stretch;
+}
+
+.card-images {
+    height: 25px;
+    justify-self: flex-end;
+    padding:bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 10px;
+}
+.announcements-container {
+    grid-area: announcements;
+}
+
+.trending-container {
+    grid-area: trending;
 }
