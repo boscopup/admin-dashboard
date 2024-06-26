@@ -1,21 +1,35 @@
 :root {
     --gray-background: rgb(223, 220, 220);
     --sidebar-image-size: 15px;
+    --main-color: #6A577B;
+    --second-color: #b1b8da;
+    --contrasting-color: #519DBB;
+    --light-color: #F5F5F5;
+    --dark-background-color: #1D1F28;
+    --shadow-color: rgb(145, 145, 145);
+
 }
 
+body {
+    background-color: var(--dark-background-color);
+    margin: 0;
+}
 .container {
     display: grid;
     grid-template: 1fr 5fr / 1fr 4fr;
     grid-template-areas:
         "sidebar header"
         "sidebar content";
-    border: 1px solid black;
     height: 100vh;
+    width: min(100vw, 60vw + 400px);
+    margin: auto;
 }
 
 .header {
     grid-area: header;
-    background-color: white;
+    background-color: var(--light-color);
+    box-shadow: 0px 7px 5px -5px var(--shadow-color);
+    z-index: 10;
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr;
     grid-template-areas:
@@ -100,14 +114,16 @@
 
 .header-buttons > button {
     width: 75px;
+    border: none;
     border-radius: 16px;
     padding-top: 5px;
     padding-bottom: 5px;
+    background-color: var(--main-color);
+    color: var(--light-color);
 }
 
 .sidebar {
-    border: 1px solid black;
-    background-color: chocolate;
+    background-color: var(--main-color);
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
@@ -115,6 +131,7 @@
     gap: 15px;
     padding-top: 25px;
     padding-left: 10px;
+    color: var(--light-color);
 }
 
 .link-container {
@@ -128,8 +145,7 @@
     width: 15px;
 }
 .content {
-    border: 1px solid black;
-    background-color: blueviolet;
+    background-color: var(--second-color);
     grid-area: content;
     display: grid;
     grid-template: auto 1fr / 3fr 1fr;
@@ -140,17 +156,23 @@
 
 .projects-container {
     grid-area: projects;
+    margin: 20px;
 }
 
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
 }
 
 .card {
-    height: 250px;
+    background-color: var(--light-color);
+    height: 200px;
     display: flex;
     flex-direction: column;
+    border-left: 10px solid var(--contrasting-color);
+    border-radius: 12px;
+    box-shadow: 5px 7px 5px 0px var(--shadow-color);
 }
 
 .card-title {
@@ -175,12 +197,16 @@
 }
 .announcements-container {
     grid-area: announcements;
+    margin: 15px;
 }
 
 .announcements {
     display: flex;
     flex-direction: column;
     width: 250px;
+    background-color: var(--light-color);
+    border-radius: 12px;
+    box-shadow: 5px 7px 5px 0px var(--shadow-color);
 }
 
 .announcement {
@@ -195,6 +221,7 @@
 
 .trending-container {
     grid-area: trending;
+    margin: 15px;
 }
 
 .trending-header {
@@ -204,6 +231,9 @@
 .trending-users {
     display: flex;
     flex-direction: column;
+    background-color: var(--light-color);
+    border-radius: 12px;
+    box-shadow: 5px 7px 5px 0px var(--shadow-color);
 }
 
 .user-card {
