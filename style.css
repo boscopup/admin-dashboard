@@ -132,7 +132,7 @@
     background-color: blueviolet;
     grid-area: content;
     display: grid;
-    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template: auto 1fr / 3fr 1fr;
     grid-template-areas:
         "projects announcements"
         "projects trending";
@@ -175,6 +175,22 @@
 }
 .announcements-container {
     grid-area: announcements;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.announcement {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.announcement > p {
+    margin: 0;
 }
 
 .trending-container {
