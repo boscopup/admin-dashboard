@@ -7,7 +7,7 @@
     --light-color: #F5F5F5;
     --dark-background-color: #1D1F28;
     --shadow-color: rgb(145, 145, 145);
-
+    --dark-gray-text: rgb(80, 79, 79);
 }
 
 body {
@@ -239,6 +239,7 @@ body {
 .card-content {
     height: 125px;
     justify-self: stretch;
+    color: var(--dark-gray-text);
 }
 
 .card-images {
@@ -305,22 +306,19 @@ body {
     margin: 15px;
 }
 
-.trending-header {
-
-}
-
 .trending-users {
     display: flex;
     flex-direction: column;
     background-color: var(--light-color);
     border-radius: 12px;
     box-shadow: 5px 7px 5px 0px var(--shadow-color);
-    width: 250px;
+    width: 220px;
+    padding: 15px;
 }
 
 .user-card {
     display: grid;
-    grid-template: 1fr 1fr / 15px auto;
+    grid-template: 1fr 1fr / 50px auto;
     grid-template-areas:
         "user-image user"
         "user-image title";
@@ -328,15 +326,20 @@ body {
 
 .user-card > img {
     grid-area: user-image;
-    height: 15px;
-    width: 15px;
+    height: 50px;
+    width: 50px;
     align-self: center;
 }
 
 .user-card > .user {
+    font-size: .9em;
+    font-weight: bold;
     margin-bottom: 0;
+    padding-left: 10px;
 }
 
 .user-card > .title {
     margin-top: 0;
+    color: var(--dark-gray-text);
+    padding-left: 10px;
 }
