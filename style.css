@@ -207,6 +207,11 @@ body {
     margin: 20px;
 }
 
+.projects-container p {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -215,33 +220,39 @@ body {
 
 .card {
     background-color: var(--light-color);
-    height: 200px;
+    height: 175px;
     display: flex;
     flex-direction: column;
     border-left: 10px solid var(--contrasting-color);
     border-radius: 12px;
     box-shadow: 5px 7px 5px 0px var(--shadow-color);
+    padding: 25px 25px;
 }
 
 .card-title {
     height: 25px;
     justify-self: flex-start;
-    padding-top: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .card-content {
-    height: 150px;
+    height: 125px;
     justify-self: stretch;
 }
 
 .card-images {
-    height: 25px;
+    height: 30px;
     justify-self: flex-end;
-    padding:bottom: 25px;
     display: flex;
     flex-direction: row;
     justify-content: end;
-    gap: 10px;
+    gap: 25px;
+}
+
+.card-images img {
+    height: 25px;
+    width: 25px;
 }
 .announcements-container {
     grid-area: announcements;
