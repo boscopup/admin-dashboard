@@ -158,21 +158,39 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 15px;
+    gap: 50px;
     padding-top: 25px;
-    padding-left: 10px;
+    padding-left: 25px;
     color: var(--light-color);
 }
 
 .link-container {
     display: grid;
-    grid-template: 1fr / 25px auto;
-    gap: 5px;
+    grid-template: 1fr / 50px auto;
+    gap: 15px;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .link-container img {
-    height: 15px;
-    width: 15px;
+    height: 25px;
+    width: 25px;
+    justify-self: center;
+    align-self: center;
+}
+
+.link-container span {
+    justify-self: start;
+    align-self: center;
+}
+
+.dashboard img {
+    height: 50px;
+    width: 50px;
+}
+
+.dashboard {
+    font-size: 1.5em;
 }
 .content {
     background-color: var(--second-color);
